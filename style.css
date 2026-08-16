@@ -126,7 +126,7 @@ body {
   background: var(--board-line);
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(99, 102, 241, 0.22);
-  width: min(100%, 264px);
+  width: min(100%, 340px);
 }
 
 .cell {
