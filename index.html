@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teka-Teki Silang TKA SD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="badge">Persiapan Ujian TKA SD</div>
+      <h1>Teka-Teki Silang</h1>
+      <p class="subtitle">Isi setiap kotak dengan satu huruf. Cocokkan dengan petunjuk Mendatar dan Menurun!</p>
+      <div class="stats">
+        <div class="stat stat-score">
+          <span class="stat-icon">&#10003;</span>
+          <span>Kata benar: <b id="scoreText">0</b>/10</span>
+        </div>
+        <div class="stat stat-hint">
+          <span class="stat-icon">&#10068;</span>
+          <span>Petunjuk: <b id="hintText">3</b></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-label="Papan teka-teki silang"></div>
+    </section>
+
+    <section class="clues">
+      <div class="clue-col">
+        <h2>Mendatar</h2>
+        <ol id="clueAcross" class="clue-list"></ol>
+      </div>
+      <div class="clue-col">
+        <h2>Menurun</h2>
+        <ol id="clueDown" class="clue-list"></ol>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="btnCheck" class="btn btn-primary" type="button">Cek Jawaban</button>
+      <button id="btnHint" class="btn btn-secondary" type="button">Petunjuk</button>
+      <button id="btnReset" class="btn btn-ghost" type="button">Ulangi</button>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <div id="winModal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-stars">&#9733;&#9733;&#9733;</div>
+      <h2>Selamat!</h2>
+      <p>Kamu berhasil menjawab semua teka-teki silang dengan benar.</p>
+      <p class="modal-sub">Hebat! Terus berlatih untuk ujian TKA-mu ya.</p>
+      <button id="btnPlayAgain" class="btn btn-primary" type="button">Main Lagi</button>
+    </div>
+  </div>
+  <div id="confettiLayer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
