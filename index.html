@@ -18,7 +18,7 @@
       <div class="stats">
         <div class="stat stat-score">
           <span class="stat-icon">&#10003;</span>
-          <span>Kata benar: <b id="scoreText">0</b>/10</span>
+          <span>Kata benar: <b id="scoreText">0</b>/<b id="totalText">10</b></span>
         </div>
         <div class="stat stat-hint">
           <span class="stat-icon">&#10068;</span>
@@ -26,6 +26,12 @@
         </div>
       </div>
     </header>
+
+    <section class="level-select" aria-label="Pilih level permainan">
+      <button class="level-btn is-active" type="button" data-level="mudah">Mudah</button>
+      <button class="level-btn" type="button" data-level="sedang">Sedang</button>
+      <button class="level-btn" type="button" data-level="sulit">Sulit</button>
+    </section>
 
     <section class="board-wrap">
       <div id="board" class="board" aria-label="Papan teka-teki silang"></div>
@@ -56,8 +62,9 @@
       <div class="modal-stars">&#9733;&#9733;&#9733;</div>
       <h2>Selamat!</h2>
       <p>Kamu berhasil menjawab semua teka-teki silang dengan benar.</p>
-      <p class="modal-sub">Hebat! Terus berlatih untuk ujian TKA-mu ya.</p>
+      <p class="modal-sub" id="winLevelSub">Hebat! Terus berlatih untuk ujian TKA-mu ya.</p>
       <button id="btnPlayAgain" class="btn btn-primary" type="button">Main Lagi</button>
+      <button id="btnChooseLevel" class="btn btn-ghost" type="button">Pilih Level Lain</button>
     </div>
   </div>
   <div id="confettiLayer" aria-hidden="true"></div>

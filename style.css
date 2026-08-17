@@ -112,6 +112,41 @@ body {
   font-size: 16px;
 }
 
+/* ---------- Level selector ---------- */
+.level-select {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.level-btn {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 2px solid var(--board-line);
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease, color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.level-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.level-btn.is-active {
+  background: linear-gradient(90deg, var(--primary), var(--sky));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 10px 22px rgba(99, 102, 241, 0.35);
+}
+
 /* ---------- Board ---------- */
 .board-wrap {
   display: flex;
@@ -424,6 +459,11 @@ body {
 
 .modal-sub {
   margin: 6px 0 18px;
+}
+
+.modal .btn {
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* ---------- Confetti ---------- */
